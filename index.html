@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pares/Impares</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
 </head>
-
 <body>
-    <select id="opciones">
-        <option value="pares">Pares</option>
+    <header class="nombre"> Aplicación Pares e impares </header>
+    <select class="barra-plegable" id="opciones"> <!--Es una lista desplegable (select)-->
+        <option value="pares">Pares</option> <!--Son las opciones de la lista (option)-->
         <option value="impares">Impares</option>
         <option value="pares-mayores">Pares Mayores</option>
         <option value="pares-menores">Pares Menores</option>
       </select>
+
+      <div id="numero-container" style="display: none;"> <!--style="display: none-> para ocultar un elemento de la página web -->
+        <label for="numero">Ingrese un número:</label> 
+        <input type="number" id="numero" name="numero" required><!--Entrada númerica -->
+    </div>
       
-      <button id="ver-btn">Ver</button>
+      <button class="boton" id="ver-btn">Ver</button>
 
     <script src="js/index.js"></script>
 </body>
