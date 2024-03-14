@@ -13,24 +13,26 @@
 
 <body>
   <header class="nombre"> Aplicación Pares e impares </header>
-  <select class="barra-plegable" id="opciones"> <!--Es una lista desplegable (select)-->
-    <option value="pares">Pares</option> <!--Son las opciones de la lista (option)-->
-    <option value="impares">Impares</option>
-    <option value="pares-mayores">Pares Mayores</option>
-    <option value="impares-mayores">Impares Mayores</option>
-  </select>
+  <main class="contenedor">
+    <section class="select-y-boton">
+      <select class="barra-plegable" id="opciones"> <!--Es una lista desplegable (select)-->
+        <option value="pares">Pares</option> <!--Son las opciones de la lista (option)-->
+        <option value="impares">Impares</option>
+        <option value="pares-mayores">Pares Mayores</option>
+        <option value="impares-mayores">Impares Mayores</option>
+      </select>
 
-  <button class="boton" id="ver-btn">Ver</button>
+      <button class="boton" id="ver-btn">Ver</button>
+    </section>
 
-  <div id="numero-container" class="oculto">
-    <label for="numero">Ingrese un número:</label>
-    <input type="number" id="numero" name="numero" min="0" max="200" required><!--Entrada númerica -->
-    <button class="botonDiv" id="buscarDiv">Buscar</button>
-  </div>
+    <section id="numero-container" class="oculto">
+      <label>Ingrese un número:</label>
+      <input type="number" id="numero" name="numero" min="0" max="200" required><!--Entrada númerica -->
+    </section>
 
-  <h2 id="imprimir"><!--Mostrar numeros--></h2>
+    <h2 class="lista" id="imprimir"><!--Mostrar numeros--></h2>
 
-
+  </main>
   <script src="js/index.js"></script>
 </body>
 

@@ -7,6 +7,8 @@ document.getElementById('ver-btn').addEventListener('click', () => {
 
     imprimirNum.innerText = "";
 
+    // Guardar el número ingresado una vez
+    const numeroIngresado = parseInt(document.getElementById('numero').value);
 
     if (seleccion === 'pares-mayores' || seleccion === 'impares-mayores') {
         // Mostrar el div numero-container si se selecciona una de las opciones adecuadas
@@ -30,26 +32,16 @@ document.getElementById('ver-btn').addEventListener('click', () => {
                 }
                 break;
             case 'pares-mayores':
-                document.getElementById('buscarDiv').addEventListener('click', () => {
-                    const numeroIngresado = parseInt(document.getElementById('numero').value);
-                    numeroIngresado.innerText = "";
-                    if (i > numeroIngresado && i % 2 === 0) {
-                        numeros.push(i);
-                        imprimirNum.innerText += 'Par en posición ' + (posicion++) + ': ' + i + '\n';
-                    }
-                });
+                if (i > numeroIngresado && i % 2 === 0) {
+                    numeros.push(i);
+                    imprimirNum.innerText += 'Par en posición ' + (posicion++) + ': ' + i + '\n';
+                }
                 break;
             case 'impares-mayores':
-                document.getElementById('buscarDiv').addEventListener('click', () => {
-                    const numeroIngresado = parseInt(document.getElementById('numero').value);
-                    numeroIngresado.innerText = "";
-
-                    if (i > numeroIngresado && i % 2 === 1) {
-                        numeros.push(i);
-                        imprimirNum.innerText += 'Par en posición ' + (posicion++) + ': ' + i + '\n';
-                    }
-                });
-
+                if (i > numeroIngresado && i % 2 === 1) {
+                    numeros.push(i);
+                    imprimirNum.innerText += 'Impar en posición ' + (posicion++) + ': ' + i + '\n';
+                }
                 break;
             default:
                 break;
