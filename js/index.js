@@ -8,11 +8,12 @@ document.getElementById('ver-btn').addEventListener('click', () => {
     imprimirNum.innerText = "";
 
 
-    if (seleccion === 'pares-mayores' || seleccion === 'pares-menores') {
+    if (seleccion === 'pares-mayores' || seleccion === 'impares-mayores') {
         // Mostrar el div numero-container si se selecciona una de las opciones adecuadas
         numeroContainer.style.display = 'block';
+    } else {
+        numeroContainer.style.display = 'none';
     }
-
 
     for (let i = 200; i >= 1; i--) {
         switch (seleccion) {
@@ -23,19 +24,36 @@ document.getElementById('ver-btn').addEventListener('click', () => {
                 }
                 break;
             case 'impares':
-                if (i % 2 !== 0) {
+                if (i % 2 === 1) {
                     numeros.push(i);
                     imprimirNum.innerText += 'Impar en posición ' + (posicion++) + ': ' + i + '\n';
                 }
                 break;
             case 'pares-mayores':
-                
+                document.getElementById('buscarDiv').addEventListener('click', () => {
+                    const numeroIngresado = parseInt(document.getElementById('numero').value);
+                    numeroIngresado.innerText = "";
+                    if (i > numeroIngresado && i % 2 === 0) {
+                        numeros.push(i);
+                        imprimirNum.innerText += 'Par en posición ' + (posicion++) + ': ' + i + '\n';
+                    }
+                });
                 break;
-            case 'pares-menores':
-                
+            case 'impares-mayores':
+                document.getElementById('buscarDiv').addEventListener('click', () => {
+                    const numeroIngresado = parseInt(document.getElementById('numero').value);
+                    numeroIngresado.innerText = "";
+
+                    if (i > numeroIngresado && i % 2 === 1) {
+                        numeros.push(i);
+                        imprimirNum.innerText += 'Par en posición ' + (posicion++) + ': ' + i + '\n';
+                    }
+                });
+
                 break;
             default:
                 break;
         }
     }
+
 });
