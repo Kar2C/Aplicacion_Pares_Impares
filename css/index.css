@@ -1,7 +1,7 @@
 :root {
     --color1: #bceeff;
     --color2: #53d4ff;
-    --color3: #0CB7F2; /* Forma de definir una variable */
+    --color3: #0CB7F2;
     --color4: #0000ff;
     --color5: #fff;
     --color6: #000;
@@ -29,7 +29,7 @@
 .contenedor {
     display: grid;
     grid-template-rows: 100px;
-    grid-template-columns: repeat(5, 1fr); /* En vez de poner 1 fr 5 veces */ /* fr es el espacio entre las columnas */
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .barra-plegable {
@@ -60,8 +60,6 @@
     transform: scale(1.1);
 }
 
-
-
 .oculto {
     display: none;
     background-color: var(--color5);
@@ -74,7 +72,6 @@
 }
 
 .select-y-boton {
-    /* Revisa la anchura según tu diseño */
     padding: 10px;
 }
 
