@@ -26,27 +26,27 @@ document.getElementById('ver-btn').addEventListener('click', () => {
             case 'pares':
                 if (i % 2 === 0) {
                     numeros.push(i);
-                    imprimirNum.innerText += 'Par en posición ' + (cont -1) + ': ' + i + '\n';
+                    imprimirNum.innerText += 'Par en posición [' + (cont -1) + ']: ' + i + '\n';
                 }
                 break;
             case 'impares':
                 if (i % 2 === 1) {
                     numeros.push(i);
-                    imprimirNum.innerText += 'Impar en posición ' + (cont - 1) + ': ' + i + '\n';
+                    imprimirNum.innerText += 'Impar en posición [' + (cont -1) + ']: ' + i + '\n';
                 }
                 break;
             case 'pares-mayores':
 
                 if (i > numeroIngresado && i % 2 === 0) {
                     numeros.push(i);
-                    imprimirNum.innerText += 'Par en posición ' + (cont - 1) + ': ' + i + '\n';
+                    imprimirNum.innerText += 'Par en posición [' + (cont -1) + ']: ' + i + '\n';
                 }
 
                 break;
             case 'impares-mayores':
                 if (i > numeroIngresado && i % 2 === 1) {
                     numeros.push(i);
-                    imprimirNum.innerText += 'Impar en posición ' + (cont - 1) + ': ' + i + '\n';
+                    imprimirNum.innerText += 'Impar en posición [' + (cont -1) + ']: ' + i + '\n';
                 }
                 break;
             default:
