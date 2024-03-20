@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pares/Impares</title>
-    <link rel="stylesheet" href="css/index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pares/Impares</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <select id="opciones">
+  <header class="nombre"> Aplicación Pares e impares </header>
+  <main class="contenedor">
+    <section class="select-y-boton">
+      <select class="barra-plegable" id="opciones">
         <option value="pares">Pares</option>
         <option value="impares">Impares</option>
         <option value="pares-mayores">Pares Mayores</option>
-        <option value="pares-menores">Pares Menores</option>
+        <option value="impares-mayores">Impares Mayores</option>
       </select>
-      
-      <button id="ver-btn">Ver</button>
 
-    <script src="js/index.js"></script>
+      <button class="boton" id="ver-btn">Ver</button>
+    </section>
+
+    <section id="numero-container" class="oculto">
+      <label>Ingrese un número:</label>
+      <input type="number" id="numero" name="numero" min="0" max="200" required>
+    </section>
+
+
+      <h2 class="lista" id="imprimir"><!--Mostrar numeros--></h2>
+    
+  </main>
+  <script src="js/index.js"></script>
 </body>
+
 </html>
